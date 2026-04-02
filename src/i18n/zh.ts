@@ -9,7 +9,7 @@ export const zh = {
     name: "Steven Wu",
     title: "AI 工程師 & 產品打造者",
     intro:
-      "我從零到一設計並交付 AI 原生產品。目前專注在 LLM、產品設計、與真實商業問題的交會點上。",
+      "從零到一設計並交付 AI 原生產品，專注在 LLM、產品設計與真實商業問題的交會點。",
   },
   work: {
     title: "我做過的東西",
