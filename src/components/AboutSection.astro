@@ -9,24 +9,22 @@ interface Props {
 const { title, bio, skillsTitle, skills } = Astro.props;
 ---
 
-<section id="about" class="px-6 pb-16 pt-12" data-animate>
-  <div class="mx-auto max-w-5xl">
+<section id="about" class="px-6 pb-24 pt-12" data-animate>
+  <div class="mx-auto max-w-3xl">
     <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
-    <div class="mt-8 grid gap-12 md:grid-cols-[3fr_2fr]">
-      <div class="space-y-4 border-l-2 border-accent/20 pl-6 text-base leading-relaxed text-text-secondary">
-        {bio.map((paragraph) => <p>{paragraph}</p>)}
-      </div>
-      <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-text-secondary">{skillsTitle}</h3>
-        <div class="mt-4 flex flex-wrap gap-2">
-          {
-            skills.map((skill) => (
-              <span class="rounded-full border border-border px-3 py-1.5 text-sm text-text-secondary transition-colors hover:border-accent/40 hover:text-text">
-                {skill}
-              </span>
-            ))
-          }
-        </div>
+    <div class="mt-8 space-y-4 border-l-2 border-accent/20 pl-6 text-lg leading-relaxed text-text-secondary">
+      {bio.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <div class="mt-12">
+      <h3 class="text-sm font-semibold uppercase tracking-wider text-text-secondary">{skillsTitle}</h3>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {
+          skills.map((skill) => (
+            <span class="rounded-full border border-border px-3 py-1.5 text-sm text-text-secondary transition-colors hover:border-accent/40 hover:text-text">
+              {skill}
+            </span>
+          ))
+        }
       </div>
     </div>
   </div>
