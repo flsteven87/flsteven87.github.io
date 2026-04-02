@@ -1,0 +1,51 @@
+---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+interface Props {
+  lang: "en" | "zh";
+}
+
+const { lang } = Astro.props;
+
+const nav = {
+  en: { work: "Work", about: "About", contact: "Contact" },
+  zh: { work: "作品", about: "關於", contact: "聯絡" },
+};
+
+const t = nav[lang];
+const prefix = lang === "zh" ? "/zh" : "";
+---
+
+<header
+  class="fixed top-0 z-50 w-full border-b border-border/50 bg-bg/80 backdrop-blur-md"
+>
+  <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+    <a
+      href={`${prefix}/`}
+      class="text-lg font-semibold tracking-tight text-text"
+    >
+      Steven Wu
+    </a>
+    <div class="flex items-center gap-6">
+      <a
+        href={`${prefix}/#work`}
+        class="text-sm text-text-secondary transition-colors hover:text-text"
+      >
+        {t.work}
+      </a>
+      <a
+        href={`${prefix}/#about`}
+        class="text-sm text-text-secondary transition-colors hover:text-text"
+      >
+        {t.about}
+      </a>
+      <a
+        href={`${prefix}/#contact`}
+        class="text-sm text-text-secondary transition-colors hover:text-text"
+      >
+        {t.contact}
+      </a>
+      <LanguageSwitcher lang={lang} />
+    </div>
+  </nav>
+</header>

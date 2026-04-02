@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import AboutSection from "../components/AboutSection.astro";
+import ContactSection from "../components/ContactSection.astro";
+import { t } from "../i18n";
+import { getProjects } from "../lib/notion";
+
+const lang = "en";
+const i = t(lang);
+const projects = await getProjects();
+---
+
+<Layout title={i.meta.title} description={i.meta.description} lang={lang}>
+  <HeroSection headline={i.hero.headline} subheadline={i.hero.subheadline} />
+
+  <section id="work" class="px-6 py-24">
+    <div class="mx-auto max-w-5xl">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+        {i.work.title}
+      </h2>
+      <div class="mt-12 grid gap-6">
+        {
+          projects.map((project) => (
+            <ProjectCard
+              name={project.name}
+              tagline={project.tagline}
+              domain={project.domain}
+              techStack={project.techStack}
+              category={project.category}
+              slug={project.slug}
+              cta={i.work.cta}
+              lang={lang}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <AboutSection
+    title={i.about.title}
+    bio={i.about.bio}
+    skillsTitle={i.about.skills_title}
+    skills={i.about.skills}
+  />
+
+  <ContactSection
+    title={i.contact.title}
+    description={i.contact.description}
+    email={i.contact.email}
+    linkedin={i.contact.linkedin}
+    cta={i.contact.cta}
+  />
+</Layout>

@@ -1,0 +1,64 @@
+---
+import type { Block } from "../lib/types";
+
+interface Props {
+  blocks: Block[];
+}
+
+const { blocks } = Astro.props;
+---
+
+{
+  blocks.map((block) => {
+    if (block.type === "heading_2") {
+      return (
+        <h2 class="mt-12 text-2xl font-bold tracking-tight first:mt-0">
+          {block.text}
+        </h2>
+      );
+    }
+
+    if (block.type === "heading_3") {
+      return <h3 class="mt-8 text-xl font-semibold">{block.text}</h3>;
+    }
+
+    if (block.type === "paragraph") {
+      if (!block.text) return null;
+      return (
+        <p class="mt-4 leading-relaxed text-text-secondary">{block.text}</p>
+      );
+    }
+
+    if (block.type === "bulleted_list_item") {
+      return (
+        <li class="mt-2 flex gap-2 text-text-secondary">
+          <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+          <span>
+            {block.richText?.map((span) =>
+              span.bold ? (
+                <strong class="font-semibold text-text">{span.text}</strong>
+              ) : span.link ? (
+                <a
+                  href={span.link}
+                  class="text-accent underline underline-offset-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {span.text}
+                </a>
+              ) : (
+                span.text
+              ),
+            )}
+          </span>
+        </li>
+      );
+    }
+
+    if (block.type === "divider") {
+      return <hr class="my-8 border-border" />;
+    }
+
+    return null;
+  })
+}

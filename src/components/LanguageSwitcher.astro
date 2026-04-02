@@ -1,0 +1,25 @@
+---
+interface Props {
+  lang: "en" | "zh";
+}
+
+const { lang } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+function getSwitchedPath(currentPath: string, currentLang: string): string {
+  if (currentLang === "en") {
+    return `/zh${currentPath}`;
+  }
+  return currentPath.replace(/^\/zh/, "") || "/";
+}
+
+const switchedPath = getSwitchedPath(currentPath, lang);
+const switchLabel = lang === "en" ? "中文" : "EN";
+---
+
+<a
+  href={switchedPath}
+  class="rounded-md border border-border px-2.5 py-1 text-xs font-medium text-text-secondary transition-colors hover:border-accent hover:text-accent"
+>
+  {switchLabel}
+</a>

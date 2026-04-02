@@ -1,0 +1,76 @@
+---
+interface Props {
+  name: string;
+  tagline: string;
+  domain: string;
+  techStack: string[];
+  category: string;
+  slug: string;
+  cta: string;
+  lang: "en" | "zh";
+}
+
+const { name, tagline, domain, techStack, category, slug, cta, lang } =
+  Astro.props;
+const prefix = lang === "zh" ? "/zh" : "";
+const href = `${prefix}/projects/${slug}`;
+const hostname = domain ? new URL(domain).hostname : "";
+---
+
+<a href={href} class="group block" data-animate>
+  <article
+    class="rounded-xl border border-border bg-surface p-6 transition-all duration-200 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 sm:p-8"
+  >
+    <div class="flex items-center gap-3 text-sm text-text-secondary">
+      <span
+        class="rounded-full border border-border px-2.5 py-0.5 text-xs font-medium"
+      >
+        {category}
+      </span>
+      {hostname && <span class="font-mono text-xs">{hostname}</span>}
+    </div>
+
+    <h3
+      class="mt-4 text-xl font-semibold tracking-tight transition-colors group-hover:text-accent sm:text-2xl"
+    >
+      {name}
+    </h3>
+
+    <p class="mt-3 leading-relaxed text-text-secondary">
+      {tagline}
+    </p>
+
+    <div class="mt-5 flex flex-wrap gap-2">
+      {
+        techStack.slice(0, 6).map((tech) => (
+          <span class="rounded-md bg-bg px-2 py-1 font-mono text-xs text-text-secondary">
+            {tech}
+          </span>
+        ))
+      }
+      {
+        techStack.length > 6 && (
+          <span class="rounded-md bg-bg px-2 py-1 font-mono text-xs text-text-secondary">
+            +{techStack.length - 6}
+          </span>
+        )
+      }
+    </div>
+
+    <div class="mt-6 flex items-center gap-1 text-sm font-medium text-accent">
+      {cta}
+      <svg
+        class="h-4 w-4 transition-transform group-hover:translate-x-1"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+      </svg>
+    </div>
+  </article>
+</a>

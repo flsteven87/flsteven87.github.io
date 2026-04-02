@@ -1,0 +1,12 @@
+# Environment
+.env
+.env.*
+.mcp.json
+
+# Astro
+dist/
+.astro/
+node_modules/
+
+# OS
+.DS_Store

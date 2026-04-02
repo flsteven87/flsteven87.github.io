@@ -1,0 +1,21 @@
+---
+interface Props {
+  headline: string;
+  subheadline: string;
+}
+
+const { headline, subheadline } = Astro.props;
+---
+
+<section class="flex min-h-[80vh] items-center justify-center px-6 pt-20">
+  <div class="mx-auto max-w-3xl text-center">
+    <h1
+      class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl"
+    >
+      {headline}
+    </h1>
+    <p class="mt-6 text-lg leading-relaxed text-text-secondary sm:text-xl">
+      {subheadline}
+    </p>
+  </div>
+</section>
