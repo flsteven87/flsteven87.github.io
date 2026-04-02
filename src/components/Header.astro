@@ -8,8 +8,8 @@ interface Props {
 const { lang } = Astro.props;
 
 const nav = {
-  en: { work: "Work", about: "About", contact: "Contact" },
-  zh: { work: "作品", about: "關於", contact: "聯絡" },
+  en: { about: "About", work: "Work", contact: "Contact" },
+  zh: { about: "關於", work: "作品", contact: "聯絡" },
 };
 
 const t = nav[lang];
@@ -28,16 +28,16 @@ const prefix = lang === "zh" ? "/zh" : "";
     </a>
     <div class="flex items-center gap-6">
       <a
-        href={`${prefix}/#work`}
-        class="text-sm text-text-secondary transition-colors hover:text-text"
-      >
-        {t.work}
-      </a>
-      <a
         href={`${prefix}/#about`}
         class="text-sm text-text-secondary transition-colors hover:text-text"
       >
         {t.about}
+      </a>
+      <a
+        href={`${prefix}/#work`}
+        class="text-sm text-text-secondary transition-colors hover:text-text"
+      >
+        {t.work}
       </a>
       <a
         href={`${prefix}/#contact`}

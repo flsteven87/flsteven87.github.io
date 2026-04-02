@@ -1,42 +1,45 @@
 export const en = {
   meta: {
-    title: "Steven Wu — AI Systems Engineer",
+    title: "Steven Wu — AI Engineer & Product Builder",
     description:
-      "I build AI systems that solve real business problems. From LLM agents to production SaaS.",
+      "Hi, I'm Steven. I design and build AI-native products — from LLM agents to full-stack SaaS.",
   },
   hero: {
-    headline: "I build AI systems that solve real business problems.",
-    subheadline:
-      "From LLM agents to production SaaS — 3 shipped products, each solving a different industry challenge.",
+    greeting: "Hi, I'm",
+    name: "Steven Wu",
+    title: "AI Engineer & Product Builder",
+    intro:
+      "I design and ship AI-native products end-to-end. Currently building at the intersection of LLMs, product design, and real-world business problems.",
   },
   work: {
-    title: "Featured Work",
-    cta: "View case study",
+    title: "What I've Built",
+    cta: "Read case study",
   },
   about: {
-    title: "About",
+    title: "About Me",
     bio: [
-      "I'm Steven — an AI/LLM systems engineer who ships production SaaS products.",
-      "With a background spanning data science at Appier (Series C, $160M raised) and Novo Nordisk, I now focus on building AI-native products that solve real business problems.",
-      "I specialize in LLM agent architectures, RAG pipelines, and multi-channel AI systems. Every product I build goes from zero to production — no prototypes, no demos, only shipped products with real users.",
+      "I started in psychology at NTU, fascinated by how people think and make decisions. That curiosity led me to data science — first at Appier, then at Novo Nordisk — where I spent years turning messy data into business insights.",
+      "When LLMs arrived, I saw an opportunity to build products that actually understand context. Now I design and build AI-native SaaS products end-to-end: architecture, backend, frontend, deployment. Three products shipped, each solving a real problem in a different industry.",
+      "I believe in building with taste — clean architecture, minimal UI, and systems that feel effortless to use.",
     ],
-    skills_title: "Core Expertise",
+    skills_title: "What I Work With",
     skills: [
-      "LLM Agent Design & Multi-Agent Systems",
-      "RAG Pipelines & Vector Search",
+      "LLM Agent Architectures",
+      "RAG & Retrieval Systems",
       "FastAPI / React / Flutter",
       "Supabase / PostgreSQL / GCP",
       "Shopify App Development",
-      "Multi-Channel Integration (LINE, Meta, Web)",
+      "LINE / Meta / Web Integrations",
     ],
   },
   contact: {
-    title: "Let's Work Together",
+    title: "Get in Touch",
     description:
-      "Available for freelance projects and consulting engagements in AI/LLM systems.",
+      "Open to freelance projects and consulting in AI/LLM systems. Let's talk.",
     email: "flsteven87@gmail.com",
     linkedin: "https://www.linkedin.com/in/flsteven87/",
-    cta: "Get in touch",
+    github: "https://github.com/flsteven87",
+    cta: "Say hello",
   },
   project: {
     challenge: "Challenge",

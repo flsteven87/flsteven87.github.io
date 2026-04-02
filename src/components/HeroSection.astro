@@ -1,21 +1,36 @@
 ---
 interface Props {
-  headline: string;
-  subheadline: string;
+  greeting: string;
+  name: string;
+  title: string;
+  intro: string;
 }
 
-const { headline, subheadline } = Astro.props;
+const { greeting, name, title, intro } = Astro.props;
 ---
 
-<section class="flex min-h-[80vh] items-center justify-center px-6 pt-20">
-  <div class="mx-auto max-w-3xl text-center">
+<section class="flex min-h-[85vh] items-center px-6 pt-20">
+  <div class="mx-auto w-full max-w-3xl">
+    <p class="text-lg text-accent font-mono" data-animate>
+      {greeting}
+    </p>
     <h1
-      class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl"
+      class="mt-3 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl"
+      data-animate
     >
-      {headline}
+      {name}
     </h1>
-    <p class="mt-6 text-lg leading-relaxed text-text-secondary sm:text-xl">
-      {subheadline}
+    <h2
+      class="mt-4 text-3xl font-bold leading-tight tracking-tight text-text-secondary sm:text-4xl md:text-5xl"
+      data-animate
+    >
+      {title}
+    </h2>
+    <p
+      class="mt-6 max-w-xl text-lg leading-relaxed text-text-secondary"
+      data-animate
+    >
+      {intro}
     </p>
   </div>
 </section>

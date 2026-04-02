@@ -1,41 +1,44 @@
 export const zh = {
   meta: {
-    title: "Steven Wu — AI 系統工程師",
+    title: "Steven Wu — AI 工程師 & 產品打造者",
     description:
-      "我打造解決真實商業問題的 AI 系統。從 LLM Agent 到上線的 SaaS 產品。",
+      "嗨，我是 Steven。我設計並打造 AI 原生產品 — 從 LLM Agent 到完整的 SaaS。",
   },
   hero: {
-    headline: "打造解決真實商業問題的 AI 系統",
-    subheadline:
-      "從 LLM Agent 到上線 SaaS — 3 個已出貨的產品，各自解決不同產業的挑戰。",
+    greeting: "嗨，我是",
+    name: "Steven Wu",
+    title: "AI 工程師 & 產品打造者",
+    intro:
+      "我從零到一設計並交付 AI 原生產品。目前專注在 LLM、產品設計、與真實商業問題的交會點上。",
   },
   work: {
-    title: "精選作品",
-    cta: "查看案例",
+    title: "我做過的東西",
+    cta: "閱讀案例",
   },
   about: {
     title: "關於我",
     bio: [
-      "我是 Steven — 一位專注於打造 production-grade AI/LLM 系統的工程師。",
-      "曾任職於 Appier（C 輪，募資 $160M）與 Novo Nordisk 的數據團隊，現在專注於從零到一打造 AI 原生產品，解決真實的商業問題。",
-      "擅長 LLM Agent 架構、RAG Pipeline、以及多通路 AI 系統。每一個產品都是從零建到上線 — 沒有原型、沒有 Demo，只有真正有用戶的產品。",
+      "我在台大念心理系，對「人如何思考與決策」著迷。這份好奇心帶我走向資料科學 — 先在 Appier，後在 Novo Nordisk — 花了好幾年把混亂的數據變成商業洞察。",
+      "當 LLM 出現時，我看到了一個機會：打造真正能理解語境的產品。現在我從零到一設計並交付 AI 原生 SaaS 產品：架構、後端、前端、部署一手包辦。三個產品已上線，各自解決不同產業的真實問題。",
+      "我相信打造有品味的東西 — 乾淨的架構、極簡的 UI、用起來毫不費力的系統。",
     ],
-    skills_title: "核心專長",
+    skills_title: "技術領域",
     skills: [
-      "LLM Agent 設計 & 多代理系統",
-      "RAG Pipeline & 向量搜尋",
+      "LLM Agent 架構設計",
+      "RAG & 檢索系統",
       "FastAPI / React / Flutter",
       "Supabase / PostgreSQL / GCP",
       "Shopify App 開發",
-      "多通路整合（LINE、Meta、Web）",
+      "LINE / Meta / Web 整合",
     ],
   },
   contact: {
-    title: "一起合作",
-    description: "目前開放 AI/LLM 系統相關的接案與顧問合作。",
+    title: "聯絡我",
+    description: "目前開放 AI/LLM 系統相關的接案與顧問合作。聊聊吧。",
     email: "flsteven87@gmail.com",
     linkedin: "https://www.linkedin.com/in/flsteven87/",
-    cta: "聯絡我",
+    github: "https://github.com/flsteven87",
+    cta: "打聲招呼",
   },
   project: {
     challenge: "挑戰",

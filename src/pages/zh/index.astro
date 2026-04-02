@@ -13,7 +13,19 @@ const projects = await getProjects();
 ---
 
 <Layout title={i.meta.title} description={i.meta.description} lang={lang}>
-  <HeroSection headline={i.hero.headline} subheadline={i.hero.subheadline} />
+  <HeroSection
+    greeting={i.hero.greeting}
+    name={i.hero.name}
+    title={i.hero.title}
+    intro={i.hero.intro}
+  />
+
+  <AboutSection
+    title={i.about.title}
+    bio={i.about.bio}
+    skillsTitle={i.about.skills_title}
+    skills={i.about.skills}
+  />
 
   <section id="work" class="px-6 py-24">
     <div class="mx-auto max-w-5xl">
@@ -39,18 +51,12 @@ const projects = await getProjects();
     </div>
   </section>
 
-  <AboutSection
-    title={i.about.title}
-    bio={i.about.bio}
-    skillsTitle={i.about.skills_title}
-    skills={i.about.skills}
-  />
-
   <ContactSection
     title={i.contact.title}
     description={i.contact.description}
     email={i.contact.email}
     linkedin={i.contact.linkedin}
+    github={i.contact.github}
     cta={i.contact.cta}
   />
 </Layout>
