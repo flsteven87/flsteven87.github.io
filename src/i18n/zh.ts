@@ -1,8 +1,8 @@
 export const zh = {
   meta: {
-    title: "Steven Wu — AI 工程師 & 產品打造者",
+    title: "Steven Wu — AI/LLM 工程師 & 產品打造者",
     description:
-      "嗨，我是 Steven。我設計並打造 AI 原生產品 — 從 LLM Agent 到完整的 SaaS。",
+      "用 LangGraph、自建 memory 系統和 eval 框架打造 production agent 系統。三個 SaaS 產品已上線。",
   },
   hero: {
     greeting: "嗨，我是",
@@ -18,18 +18,20 @@ export const zh = {
   about: {
     title: "關於我",
     bio: [
-      "我在台大念心理系，對「人如何思考與決策」著迷。這份好奇心帶我走向資料科學 — 先在 Appier，後在 Novo Nordisk — 花了好幾年把混亂的數據變成商業洞察。",
-      "當 LLM 出現時，我看到了一個機會：打造真正能理解語境的產品。現在我從零到一設計並交付 AI 原生 SaaS 產品：架構、後端、前端、部署一手包辦。三個產品已上線，各自解決不同產業的真實問題。",
-      "我相信打造有品味的東西 — 乾淨的架構、極簡的 UI、用起來毫不費力的系統。",
+      "台大心理系畢業，畢業後做了八年的數據工作，從分析 dashboard 做到自己建完整產品。",
+      "在 Novo Nordisk 用 Snowflake 和 dbt 重建報表系統，原本一週的工作現在一天完成。在 Appier 建了反詐欺偵測系統，抓到超過 $1M 的假廣告流量，也寫了競價演算法讓 campaign ROI 提升 5% 到 40%。",
+      "工作之餘自己造產品，三個已上線：AI Commerce Ready（Shopify 商品資料優化，對接 ChatGPT/Gemini 購物）、NexRex（AI 跑步教練，用 LangGraph agent、3 層記憶系統和自建 eval 指標）、Replai（no-code chatbot builder，有 RAG）。",
+      "心理系的訓練比預期有用。人怎麼讀資訊、信任什麼、在哪裡卡住。我設計 prompt 和資料產品時都在用這些。",
+      "用 AI coding agent 全職開發超過一年。Claude Code Max 八個月，之前是 Cursor。不只是下 prompt，而是建整套系統：15 個自訂命令、自動格式化 hook、跨 session 的記憶系統，還有一個讓 agent 自己規劃、實作、測試、review 然後循環的回饋迴路。整套配置已經開源。",
     ],
     skills_title: "技術領域",
     skills: [
-      "LLM Agent 架構設計",
-      "RAG & 檢索系統",
-      "FastAPI / React / Flutter",
-      "Supabase / PostgreSQL / GCP",
-      "Shopify App 開發",
-      "LINE / Meta / Web 整合",
+      "LangGraph / LangChain / LangMem / Mem0",
+      "DeepEval / Langfuse / 自建 G-Eval 指標",
+      "Context Engineering / RAG / ChromaDB",
+      "FastAPI / React / Flutter / Astro",
+      "Supabase / PostgreSQL / GCP / Cloudflare",
+      "Shopify App / LINE / Meta 整合",
     ],
   },
   contact: {

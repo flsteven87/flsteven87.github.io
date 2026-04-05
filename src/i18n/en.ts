@@ -1,8 +1,8 @@
 export const en = {
   meta: {
-    title: "Steven Wu — AI Engineer & Product Builder",
+    title: "Steven Wu — AI/LLM Engineer & Product Builder",
     description:
-      "Hi, I'm Steven. I design and build AI-native products — from LLM agents to full-stack SaaS.",
+      "I build production agent systems with LangGraph, custom memory, and eval frameworks. Three SaaS products shipped.",
   },
   hero: {
     greeting: "Hi, I'm",
@@ -18,18 +18,20 @@ export const en = {
   about: {
     title: "About Me",
     bio: [
-      "I started in psychology at NTU, fascinated by how people think and make decisions. That curiosity led me to data science — first at Appier, then at Novo Nordisk — where I spent years turning messy data into business insights.",
-      "When LLMs arrived, I saw an opportunity to build products that actually understand context. Now I design and build AI-native SaaS products end-to-end: architecture, backend, frontend, deployment. Three products shipped, each solving a real problem in a different industry.",
-      "I believe in building with taste — clean architecture, minimal UI, and systems that feel effortless to use.",
+      "I studied psychology at NTU. Ended up doing data work after graduation and kept going for eight years, from analyst dashboards to building entire products.",
+      "At Novo Nordisk I rebuilt reporting on Snowflake and dbt. What used to take a week takes a day. At Appier I built anti-fraud detection that caught over $1M in fake ad spend, and wrote bidding algorithms that improved campaign ROI between 5% and 40%.",
+      "I also build my own products, mostly outside work hours. Three are live: AI Commerce Ready (Shopify feed optimization for ChatGPT/Gemini shopping), NexRex (AI running coach with LangGraph agent, 3-tier memory, custom eval suite), and Replai (no-code chatbot builder with RAG).",
+      "The psych degree helps more than I expected. How people read information, what they trust, where they get confused. I use that when I design prompts and data products.",
+      "I've been using AI coding agents full-time for over a year. Eight months on Claude Code Max, before that Cursor. Not just prompting, but building the system around it: 15 custom commands, automated formatting hooks, a memory system that persists context across sessions, and a feedback loop where the agent plans, builds, tests, and reviews its own work in cycles. I open-sourced the whole setup.",
     ],
     skills_title: "What I Work With",
     skills: [
-      "LLM Agent Architectures",
-      "RAG & Retrieval Systems",
-      "FastAPI / React / Flutter",
-      "Supabase / PostgreSQL / GCP",
-      "Shopify App Development",
-      "LINE / Meta / Web Integrations",
+      "LangGraph / LangChain / LangMem / Mem0",
+      "DeepEval / Langfuse / Custom G-Eval",
+      "Context Engineering / RAG / ChromaDB",
+      "FastAPI / React / Flutter / Astro",
+      "Supabase / PostgreSQL / GCP / Cloudflare",
+      "Shopify App / LINE / Meta Integrations",
     ],
   },
   contact: {
